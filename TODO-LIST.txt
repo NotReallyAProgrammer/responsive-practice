@@ -1,0 +1,4 @@
+1. Create A Front End.
+2. Convert Dummy Data in Typescript.
+3. Make The Slider Functional.
+4. Convert Placeholder html in Angular

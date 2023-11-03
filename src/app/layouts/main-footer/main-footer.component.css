@@ -1,0 +1,143 @@
+.main-footer {
+  padding-top: 45px;
+  padding-inline: var(--PADDING-INLINE);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ROW-GAP);
+}
+
+.main-footer__header {
+  display: flex;
+  align-items: center;
+  gap: var(--GAP-S);
+}
+
+.mf__header-logo {
+  height: 48px;
+  width: 48px;
+}
+/* END OF main-footer__header */
+
+.main-footer__links {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--ROW-GAP);
+}
+
+.mf__links-category,
+.mf__links-category ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--GAP-S);
+  font-size: 15px;
+  list-style: none;
+}
+
+.mf__links-category h5 {
+  font-size: 0.9375rem;
+}
+
+.mf__links-category ul li a {
+  color: var(--P-COLOR);
+}
+
+.mf__links-category ul li a:hover,
+.mf__links-category ul li a:focus {
+  color: var(--P-LIGTHER);
+}
+
+.mf__links-category ul li a:active {
+  color: var(--LINK-ACTIVE);
+}
+/* END OF main-footer__links */
+
+.main-footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: var(--GAP-S);
+}
+
+.mf__social-links {
+  display: flex;
+  align-items: center;
+  gap: var(--GAP-S);
+}
+
+.mf__social-links a {
+  color: var(--P-LIGTHER);
+  font-size: 15px;
+}
+
+.mf__social-links a:hover,
+.mf__social-links a:focus {
+  color: var(--PRIMARY-COLOR);
+}
+/* END OF main-footer__social*/
+
+.footer__bottom {
+  margin-top: 35px;
+  background-color: var(--FOOTER-LIGHT-BG);
+  padding-inline: var(--PADDING-INLINE);
+  padding-block: 30px;
+}
+
+.footer__bottom ul {
+  list-style: none;
+  display: flex;
+  gap: var(--ROW-GAP);
+  margin-bottom: 20px;
+}
+
+.footer__bottom ul a {
+  color: var(--P-COLOR-DARK);
+}
+
+.footer__bottom ul a:hover,
+.footer__bottom ul a:focus {
+  color: var(--P-LIGTHER);
+}
+
+.footer__bottom ul a:active {
+  color: var(--PRIMARY-COLOR);
+}
+
+.bottom-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .main-footer__header {
+    margin-bottom: 30px;
+  }
+  .main-footer {
+    padding: clamp(50px, 10vw, 100px);
+    height: 520px;
+    justify-content: center;
+  }
+  .main-footer__links {
+    flex-direction: row;
+  }
+
+  .main-footer__social {
+    margin-left: auto;
+  }
+
+  .footer__bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+  }
+
+  .footer__bottom ul {
+    margin-bottom: 0;
+  }
+
+  .bottom-text {
+    flex-direction: row;
+    gap: var(--GAP-S);
+  }
+}

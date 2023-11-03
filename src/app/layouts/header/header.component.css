@@ -1,0 +1,161 @@
+.header {
+  top: 0;
+  z-index: 2;
+  height: 80px;
+  padding: 22px 15px;
+  position: sticky;
+  background-color: var(--BODY-BG-COLOR);
+  box-shadow: var(--SHADOW);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu button {
+  background: none;
+  border: none;
+}
+
+.menu-sidenav {
+  position: absolute;
+  background-color: var(--PRIMARY-COLOR);
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: auto;
+  box-shadow: var(--SHADOW);
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.menu-sidenav::after {
+  visibility: hidden;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+
+.close-btn svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+}
+
+.sidenav-list {
+  margin-top: 20px;
+
+  display: flex;
+  gap: 10;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidenav-list ul {
+}
+
+.sidenav-list li {
+  position: relative;
+  padding: 20px;
+}
+
+.sidenav-list li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sidenav-list li a::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.sidenav-list li a:hover,
+a:focus {
+  color: var(--PRIMARY-COLOR);
+}
+
+.sidenav-list li a:hover::before,
+a:focus::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.sidenav-list li a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+
+  inset: 0 0 0 0;
+  background: var(--HIGHLIGHT-COLOR);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.header__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  gap: 25px;
+}
+
+.header__list li a {
+  font-size: clamp(0.8125rem, 2.2vw, 1.25rem);
+}
+
+.medium {
+  position: absolute;
+  left: -100000px;
+}
+
+/* Media Query */
+@media screen and (min-width: 768px) {
+  .mobile {
+    visibility: hidden;
+  }
+
+  .menu-sidenav {
+    visibility: hidden;
+  }
+
+  .medium {
+    position: relative;
+    left: 0;
+  }
+
+  .header__nav {
+    justify-content: center;
+    gap: 4%;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 20rem;
+    min-height: 50vh;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,107 @@
+<header class="header">
+  <nav class="header__nav">
+    <section class="menu-sidenav" *ngIf="collapsed">
+      <button (click)="toggleCollapsed()" type="button" class="close-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 384 512"
+        >
+          <path
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
+        </svg>
+      </button>
+      <ul class="sidenav-list">
+        <li>
+          <a href="/">First Link</a>
+        </li>
+        <li>
+          <a [routerLink]="['/section']" routerLinkActive="active"
+            >Second Link</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/third-link']" routerLinkActive="active"
+            >Third Link</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/404']" routerLinkActive="active">Fourth Link</a>
+        </li>
+        <li>
+          <a [routerLink]="['/404']" routerLinkActive="active">Fifth Link</a>
+        </li>
+        <li>
+          <a [routerLink]="['/404']" routerLinkActive="active">Sixth Link</a>
+        </li>
+      </ul>
+    </section>
+    <h2 class="header__menu center mobile">
+      <button (click)="toggleCollapsed()">
+        <img
+          [src]="'../../../assets/menu.png'"
+          alt="menu"
+          height="24"
+          width="24"
+        />
+      </button>
+    </h2>
+
+    <ul class="header__list medium">
+      <li>
+        <a href=""><h5>First Link</h5></a>
+      </li>
+      <li>
+        <a [routerLink]="['/section']" routerLinkActive="active"
+          ><h5>Second Link</h5></a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/third-link']" routerLinkActive="active"
+          ><h5>Third Link</h5></a
+        >
+      </li>
+    </ul>
+
+    <h2 class="header__logo center">
+      <a href="/">
+        <img
+          [src]="'../../../assets/Logo.png'"
+          alt="site logo"
+          height="48"
+          width="48"
+        />
+      </a>
+    </h2>
+
+    <ul class="header__list medium">
+      <li>
+        <a [routerLink]="['/404']" routerLinkActive="active"
+          ><h5>Fourth Link</h5></a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/404']" routerLinkActive="active"
+          ><h5>Fifth Link</h5></a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/404']" routerLinkActive="active"
+          ><h5>Sixth Link</h5></a
+        >
+      </li>
+    </ul>
+
+    <h2 class="header__search center mobile">
+      <a href="/">
+        <img
+          [src]="'../../../assets/search24x24.png'"
+          alt="search"
+          height="24"
+          width="24"
+        />
+      </a>
+    </h2>
+  </nav>
+</header>
