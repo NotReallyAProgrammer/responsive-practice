@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
         datasets: [
           {
             data: [28, 22, 36, 13],
+
             backgroundColor: [
               'rgb(36, 175, 181)',
               'hsla(182, 67%, 42%, 0.2)',

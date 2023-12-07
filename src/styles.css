@@ -212,10 +212,6 @@ html {
   font-family: var(--FF);
 }
 
-spline-view {
-  height: 100vh;
-  color: white;
-}
 body {
   background-color: var(--BODY-BG-COLOR);
   color: var(--HEADING-COLOR);
